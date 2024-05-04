@@ -7,7 +7,7 @@ export default component$(() => {
     <footer>
       <div class={styles.footerItem}>
         <span class={styles.footerText}>A game by</span> 
-        <a href="https://www.github.com/codyroberts" target="_blank" class={styles.footerText}>
+        <a href="https://www.codyroberts.net/" target="_blank" class={styles.footerText}>
           <span class={styles.highlight}> Cody Roberts</span>
         </a>
       </div>
