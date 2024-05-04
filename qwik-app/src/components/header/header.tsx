@@ -9,7 +9,7 @@ export default component$(() => {
         <ul>
           <li>
             <a
-              href="/"
+              href="/play"
               target="_blank"
             >
               Play
