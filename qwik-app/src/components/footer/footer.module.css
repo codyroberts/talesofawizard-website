@@ -9,7 +9,7 @@
 .highlight {
   font-size: 0.8rem;
   text-decoration: none;
-  color: var(--qwik-light-purple);
+  color: var(--light-purple);
 }
 
 .footerText span:not(.spacer) {

@@ -1,6 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import styles from "./header.module.css";
 import ImgBook from "../../media/OldBook.png?jsx"
+import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
@@ -8,39 +9,35 @@ export default component$(() => {
       <div class={["container", styles.wrapper]}>
         <ul>
           <li>
-            <a
-              href="/play"
-              target="_blank"
-            >
+            <Link href="/play">
               Play
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/"
-              target="_blank"
-            >
+            <Link href="/learn">
               Learn
-            </a>
+            </Link>
           </li>
           <li> 
-                <ImgBook class={styles.logoImage} />
+            <a href="/">
+              <ImgBook class={styles.centerPiece} />
+            </a>
           </li>
           <li>
-            <a
-              href="/"
+            <Link
+              href="https://github.com/codyroberts/talesofawizard"
               target="_blank"
             >
               Github
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/"
+            <Link
+              href="https://discord.gg/rjX2JbYAVR"
               target="_blank"
             >
               Discord
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
