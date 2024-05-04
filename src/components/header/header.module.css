@@ -11,6 +11,11 @@
   padding: 0;
 }
 
+.centerPiece:hover {
+  -webkit-filter: drop-shadow(0 0 1rem var(--highlight));
+  filter: drop-shadow(0 0 1rem var(--highlight));
+}
+
 .header ul {
   margin: 0;
   padding: 0;
