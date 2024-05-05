@@ -1,21 +1,35 @@
 /**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
+ * Tailwind CSS imports
+ * View the full documentation at https://tailwindcss.com
  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --light-purple: #ac7ff4;
-  --dark-purple: #713fc2;
-  --darkest: #000511;
-  --dark: #001c3b;
-  --mid: #00386c;
-  --light: #0057a1;
-  --highlight: #117fda;
-  --dark-text: #ffff;
-  --light-text: #0000;
+@layer components {
+  h1, .h1{
+    @apply text-dark-text text-center m-0;
+  }
+  
+  h2, .h2 {
+  @apply text-dark-text m-0 font-normal;
+  }
+  
+  h3, .h3{
+    @apply text-dark-text m-0;
+  }
+  
+  p, .p{
+      @apply text-dark-text m-0;
+  }
+
+  html, .html{
+    @apply h-screen font-serif leading-none 
+  }
+
+  body, .body{
+    @apply min-h-screen p-0 m-0 bg-darkest text-dark-text overflow-x-hidden
+  }
 }
 
 @font-face {
@@ -24,21 +38,4 @@
   font-style: "normal";
   font-weight: 400;
   src: url("../fonts/spectral-regular.woff2") format(woff2);
-}
-
-html {
-  height: 100%;
-  line-height: 1;
-  -webkit-text-size-adjust: 100%;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  font-family: 'Spectral Regular', serif;
-}
-
-body {
-  min-height: 100%;
-  padding: 0;
-  margin: 0;
-  line-height: inherit;
 }
