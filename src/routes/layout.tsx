@@ -1,6 +1,7 @@
 import { component$, Slot } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
+import ImgCastle from "../media/castle.png?jsx";
 
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
@@ -27,6 +28,7 @@ export default component$(() => {
     <>
       <Header />
       <main>
+        <ImgCastle class="absolute h-screen w-screen bottom-0 object-cover -z-1 opacity-20 pointer-events-none" alt="Image of a Castle" />
         <Slot />
       </main>
       <Footer />
