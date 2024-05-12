@@ -1,50 +1,41 @@
-import { component$ } from "@builder.io/qwik";
-import ImgBook from "../../media/OldBook.png?jsx"
+import { component$, Slot } from "@builder.io/qwik";
+import ImgBook from "../../media/OldBook.png?jsx";
 import { Link } from "@builder.io/qwik-city";
+
+type HeaderLinkProps = { href: string };
+
+const HeaderLink = component$<HeaderLinkProps>(({ href }) => {
+  return (
+    <li id="navElement" class="m-0 hidden p-0 text-xs sm:inline-block">
+      <Link
+        class="inline-block p-0 text-sm text-dark-text no-underline hover:text-highlight md:text-2xl"
+        href={href}
+      >
+        <Slot />
+      </Link>
+    </li>
+  );
+});
 
 export default component$(() => {
   return (
     <div class="flex lg:items-center lg:justify-evenly">
-    <ul class="flex items-center flex-col lg:flex-row list-none lg:gap-8 m-0 p-0">
-
-        <li id="navElement" class="inline-block m-0 p-0 text-xs">
-        <Link class="max-sm:invisible lg:inline-block text-dark-text text-sm no-underline p-0 hover:text-highlight md:text-2xl" href="/play">
-            Play
-        </Link>
+      <ul class="m-0 flex list-none flex-col items-center p-0 lg:flex-row lg:gap-8">
+        <HeaderLink href="/play">Play</HeaderLink>
+        <HeaderLink href="/learn">Learn</HeaderLink>
+        <li class="m-0 inline-block p-0 text-xs">
+          <a
+            class="inline-block p-0 text-sm text-dark-text no-underline hover:text-highlight md:text-2xl"
+            href="/"
+          >
+            <ImgBook class="m-0 h-auto max-w-24 p-0 hover:drop-shadow-highlight lg:max-w-28" />
+          </a>
         </li>
-        <li id="navElement" class="inline-block m-0 p-0 text-xs">
-        <Link class="max-sm:invisible lg:inline-block text-dark-text text-sm no-underline p-0 hover:text-highlight md:text-2xl" href="/learn">
-            Learn
-        </Link>
-        </li>
-        <li class="max-sm:order-first inline-block m-0 p-0 text-xs"> 
-        <Link onClick$={() => {
-
-            document.querySelectorAll('[id=navElement]').forEach((element)=>{
-                element.classList.toggle("max-sm:invisible");
-            });
-        
-        }} class="inline-block text-dark-text text-sm no-underline p-0 hover:text-highlight md:text-2xl">
-            <ImgBook class="max-w-28 h-auto m-0 p-0 hover:drop-shadow-highlight" />
-        </Link>
-        </li>
-        <li id="navElement" class="inline-block m-0 p-0 text-xs">
-        <Link class="max-sm:invisible lg:inline-block text-dark-text text-sm no-underline p-0 hover:text-highlight md:text-2xl"
-            href="https://github.com/codyroberts/talesofawizard"
-            target="_blank"
-        >
-            Github
-        </Link>
-        </li>
-        <li id="navElement" class="inline-block m-0 p-0 text-xs">
-        <Link class="max-sm:invisible lg:inline-block text-dark-text text-sm no-underline p-0 hover:text-highlight md:text-2xl"
-            href="https://discord.gg/rjX2JbYAVR"
-            target="_blank"
-        >
-            Discord
-        </Link>
-        </li>
-    </ul>
+        <HeaderLink href="https://github.com/codyroberts/talesofawizard">
+          Github
+        </HeaderLink>
+        <HeaderLink href="https://discord.gg/rjX2JbYAVR">Discord</HeaderLink>
+      </ul>
     </div>
   );
 });
