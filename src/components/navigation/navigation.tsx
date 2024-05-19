@@ -1,4 +1,4 @@
-import { component$, Slot } from "@builder.io/qwik";
+import { component$, Slot, useSignal } from "@builder.io/qwik";
 import ImgBook from "../../media/OldBook.png?jsx";
 import { Link } from "@builder.io/qwik-city";
 
@@ -18,6 +18,8 @@ const HeaderLink = component$<HeaderLinkProps>(({ href }) => {
 });
 
 export default component$(() => {
+  let mobileMenu = useSignal(false);
+
   return (
     <>
       {/* Desktop */}
@@ -40,23 +42,30 @@ export default component$(() => {
         </ul>
       </div>
       {/* Mobile */}
-      <div class="flex flex-col-reverse lg:hidden">
-        <div class="ml-2 flex items-center justify-start">
-          <a
-            class="inline-block p-0 text-sm text-dark-text no-underline hover:text-highlight md:text-2xl"
-            href="/"
+      <div class="mt-96 flex justify-evenly lg:hidden">
+        <div class="flex-col justify-between">
+          <div
+            onClick$={() => {
+              mobileMenu.value = !mobileMenu.value;
+            }}
+            class="ml-2 flex justify-start"
           >
             <ImgBook class="m-0 h-auto max-w-24 p-0 hover:drop-shadow-highlight lg:max-w-28" />
-          </a>
+          </div>
+          {mobileMenu.value && (
+            <ul class="m-0 ml-5 list-none flex-col justify-start p-0">
+              <HeaderLink href="/">Home</HeaderLink>
+              <HeaderLink href="/play">Play</HeaderLink>
+              <HeaderLink href="/learn">Learn</HeaderLink>
+              <HeaderLink href="https://github.com/codyroberts/talesofawizard">
+                Github
+              </HeaderLink>
+              <HeaderLink href="https://discord.gg/rjX2JbYAVR">
+                Discord
+              </HeaderLink>
+            </ul>
+          )}
         </div>
-        <ul class="m-0 ml-5 flex list-none flex-col justify-start p-0">
-          <HeaderLink href="/play">Play</HeaderLink>
-          <HeaderLink href="/learn">Learn</HeaderLink>
-          <HeaderLink href="https://github.com/codyroberts/talesofawizard">
-            Github
-          </HeaderLink>
-          <HeaderLink href="https://discord.gg/rjX2JbYAVR">Discord</HeaderLink>
-        </ul>
       </div>
     </>
   );
