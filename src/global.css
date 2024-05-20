@@ -7,28 +7,34 @@
 @tailwind utilities;
 
 @layer components {
-  h1, .h1{
-    @apply text-dark-text text-center m-0;
-  }
-  
-  h2, .h2 {
-  @apply text-dark-text m-0 font-normal;
-  }
-  
-  h3, .h3{
-    @apply text-dark-text m-0;
-  }
-  
-  p, .p{
-      @apply text-dark-text m-0;
+  h1,
+  .h1 {
+    @apply m-0 text-center text-dark-text;
   }
 
-  html, .html{
-    @apply h-screen font-serif leading-none 
+  h2,
+  .h2 {
+    @apply m-0 font-normal text-dark-text;
   }
 
-  body, .body{
-    @apply min-h-screen p-0 m-0 bg-darkest text-dark-text overflow-x-hidden
+  h3,
+  .h3 {
+    @apply m-0 text-dark-text;
+  }
+
+  p,
+  .p {
+    @apply m-0 text-dark-text;
+  }
+
+  html,
+  .html {
+    @apply h-screen font-serif leading-none;
+  }
+
+  body,
+  .body {
+    @apply m-0 min-h-screen overflow-x-hidden bg-darkest p-0 text-dark-text;
   }
 }
 
