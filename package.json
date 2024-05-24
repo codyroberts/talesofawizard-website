@@ -48,6 +48,7 @@
     "vite-tsconfig-paths": "^4.2.1"
   },
   "dependencies": {
+    "pixi.js": "^8.1.4",
     "tailwindcss": "^3.4.3"
   }
 }
