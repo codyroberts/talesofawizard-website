@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@pixi/tilemap':
+        specifier: ^5.0.1
+        version: 5.0.1(pixi.js@8.1.4)
       pixi.js:
         specifier: ^8.1.4
         version: 8.1.4
@@ -1198,6 +1201,11 @@ packages:
 
   '@pixi/colord@2.9.6':
     resolution: {integrity: sha512-nezytU2pw587fQstUu1AsJZDVEynjskwOL+kibwcdxsMBFqPsFFNA7xl0ii/gXuDi6M0xj3mfRJj8pBSc2jCfA==}
+
+  '@pixi/tilemap@5.0.1':
+    resolution: {integrity: sha512-ePdtS7WXF0FfQM6WajIynDLKC7+57ErOxXfB1cTKG7jN0WIbZFSEoU/MSJS02kIKDWOyRRoe+R5im+3LXU5BBw==}
+    peerDependencies:
+      pixi.js: '>=8.0.2'
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -5953,6 +5961,10 @@ snapshots:
       json-parse-even-better-errors: 2.3.1
 
   '@pixi/colord@2.9.6': {}
+
+  '@pixi/tilemap@5.0.1(pixi.js@8.1.4)':
+    dependencies:
+      pixi.js: 8.1.4
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
