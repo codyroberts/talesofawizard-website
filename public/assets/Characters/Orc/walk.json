@@ -1,0 +1,145 @@
+{
+  "frames": {
+    "Walk-0.png": {
+      "frame": { "x": 1, "y": 97, "w": 9, "h": 9 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 11, "y": 11, "w": 9, "h": 9 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-1.png": {
+      "frame": { "x": 1, "y": 1, "w": 9, "h": 10 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 11, "y": 10, "w": 9, "h": 10 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-2.png": {
+      "frame": { "x": 1, "y": 97, "w": 9, "h": 9 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 11, "y": 11, "w": 9, "h": 9 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-3.png": {
+      "frame": { "x": 1, "y": 13, "w": 9, "h": 10 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 11, "y": 10, "w": 9, "h": 10 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-4.png": {
+      "frame": { "x": 1, "y": 108, "w": 9, "h": 9 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 12, "y": 11, "w": 9, "h": 9 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-5.png": {
+      "frame": { "x": 1, "y": 25, "w": 9, "h": 10 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 12, "y": 10, "w": 9, "h": 10 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-6.png": {
+      "frame": { "x": 1, "y": 108, "w": 9, "h": 9 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 12, "y": 11, "w": 9, "h": 9 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-7.png": {
+      "frame": { "x": 1, "y": 37, "w": 9, "h": 10 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 12, "y": 10, "w": 9, "h": 10 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-8.png": {
+      "frame": { "x": 1, "y": 119, "w": 9, "h": 9 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 11, "y": 11, "w": 9, "h": 9 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-9.png": {
+      "frame": { "x": 1, "y": 49, "w": 9, "h": 10 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 11, "y": 10, "w": 9, "h": 10 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-10.png": {
+      "frame": { "x": 1, "y": 119, "w": 9, "h": 9 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 11, "y": 11, "w": 9, "h": 9 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-11.png": {
+      "frame": { "x": 1, "y": 61, "w": 9, "h": 10 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 11, "y": 10, "w": 9, "h": 10 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-12.png": {
+      "frame": { "x": 1, "y": 130, "w": 9, "h": 9 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 12, "y": 11, "w": 9, "h": 9 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-13.png": {
+      "frame": { "x": 1, "y": 73, "w": 9, "h": 10 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 11, "y": 10, "w": 9, "h": 10 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-14.png": {
+      "frame": { "x": 1, "y": 130, "w": 9, "h": 9 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 11, "y": 11, "w": 9, "h": 9 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
+    "Walk-15.png": {
+      "frame": { "x": 1, "y": 85, "w": 9, "h": 10 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 11, "y": 10, "w": 9, "h": 10 },
+      "sourceSize": { "w": 32, "h": 32 }
+    }
+  },
+  "animations": {
+    "Walk": [
+      "Walk-0.png",
+      "Walk-1.png",
+      "Walk-2.png",
+      "Walk-3.png",
+      "Walk-4.png",
+      "Walk-5.png",
+      "Walk-6.png",
+      "Walk-7.png",
+      "Walk-8.png",
+      "Walk-9.png",
+      "Walk-10.png",
+      "Walk-11.png",
+      "Walk-12.png",
+      "Walk-13.png",
+      "Walk-14.png",
+      "Walk-15.png"
+    ]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "walk-0.png",
+    "format": "RGBA8888",
+    "size": { "w": 11, "h": 140 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:c7bacea4440a4d861254692803c44e19:634a92abb6fc8e99403cc4359705cf8c:06c729ad2c8dfa192a3f7d3cf901c086$"
+  }
+}

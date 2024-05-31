@@ -28,7 +28,10 @@ export default component$(() => {
     <>
       <Header />
       <main>
-        <ImgCastle class="absolute h-screen w-screen bottom-0 object-cover -z-1 opacity-20 pointer-events-none" alt="Image of a Castle" />
+        <ImgCastle
+          class="-z-1 pointer-events-none absolute bottom-0 h-screen w-screen object-cover opacity-20"
+          alt="Image of a Castle"
+        />
         <Slot />
       </main>
       <Footer />
