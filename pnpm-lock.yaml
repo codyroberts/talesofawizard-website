@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      excalibur:
+        specifier: ^0.29.3
+        version: 0.29.3
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.3(ts-node@10.9.1(@types/node@20.12.8)(typescript@5.4.5))
@@ -56,7 +59,7 @@ importers:
         version: 6.15.0
       vercel:
         specifier: ^29.1.1
-        version: 29.4.0(@types/node@20.12.8)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@5.4.5))
+        version: 29.4.0(@types/node@20.12.8)(bufferutil@4.0.8)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@5.4.5))(utf-8-validate@5.0.10)
       vite:
         specifier: ^5.2.10
         version: 5.2.11(@types/node@20.12.8)(terser@5.31.0)
@@ -1756,6 +1759,10 @@ packages:
   buffer@5.7.1:
     resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==}
 
+  bufferutil@4.0.8:
+    resolution: {integrity: sha512-4T53u4PdgsXqKaIctwF8ifXlRTTmEPJ8iEPWFdGZvcf7sbwYo6FKFEX9eNNAnzFZ7EzJAQ3CJeOtCRA4rDp7Pw==}
+    engines: {node: '>=6.14.2'}
+
   bytes@3.1.2:
     resolution: {integrity: sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==}
     engines: {node: '>= 0.8'}
@@ -1936,6 +1943,9 @@ packages:
 
   core-js-compat@3.37.0:
     resolution: {integrity: sha512-vYq4L+T8aS5UuFg4UwDhc7YNRWVeVZwltad9C/jV3R2LgVOpS9BDr7l/WL6BN0dbV3k1XejPTHqqEzJgsa0frA==}
+
+  core-js@3.36.1:
+    resolution: {integrity: sha512-BTvUrwxVBezj5SZ3f10ImnX2oRByMxql3EimVqMysepbC9EeMUOpLwdy6Eoili2x6E4kf+ZUB5k/+Jv55alPfA==}
 
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
@@ -2448,6 +2458,9 @@ packages:
   eval@0.1.8:
     resolution: {integrity: sha512-EzV94NYKoO09GLXGjXj9JIlXijVck4ONSr5wiCWDvhsvj5jxSrzTmRU/9C1DyB6uToszLs8aifA6NQ7lEQdvFw==}
     engines: {node: '>= 0.8'}
+
+  excalibur@0.29.3:
+    resolution: {integrity: sha512-R1Nzf5/U2oSuIcWKZinAUR8b3eW71bwC6UvnqSt08d2uTVpaIDwl6cyVvB+1jY5GeA0BWmFS/wQ/PaNKTZDP7A==}
 
   execa@5.1.1:
     resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
@@ -4561,6 +4574,10 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
+  utf-8-validate@5.0.10:
+    resolution: {integrity: sha512-Z6czzLq4u8fPOyx7TU6X3dvUZVvoJmxSQ+IcrlmagKhilxlhZgxPK6C5Jqbkw1IDUmFTM+cz9QDnnLTwDz/2gQ==}
+    engines: {node: '>=6.14.2'}
+
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
@@ -6254,11 +6271,11 @@ snapshots:
       '@babel/runtime': 7.12.1
       web-vitals: 0.2.4
 
-  '@vercel/gatsby-plugin-vercel-builder@1.3.5':
+  '@vercel/gatsby-plugin-vercel-builder@1.3.5(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
     dependencies:
       '@sinclair/typebox': 0.25.24
       '@vercel/build-utils': 6.7.3
-      '@vercel/node': 2.14.3
+      '@vercel/node': 2.14.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       '@vercel/routing-utils': 2.2.1
       esbuild: 0.14.47
       etag: 1.8.1
@@ -6293,7 +6310,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@vercel/node@2.14.3':
+  '@vercel/node@2.14.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
     dependencies:
       '@edge-runtime/vm': 2.0.0
       '@types/node': 14.18.33
@@ -6310,7 +6327,7 @@ snapshots:
       ts-morph: 12.0.0
       ts-node: 10.9.1(@types/node@14.18.33)(typescript@4.9.5)
       typescript: 4.9.5
-      ws: 8.13.0
+      ws: 8.13.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -6329,9 +6346,9 @@ snapshots:
       - encoding
       - supports-color
 
-  '@vercel/remix-builder@1.8.10(@types/node@20.12.8)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@5.4.5))':
+  '@vercel/remix-builder@1.8.10(@types/node@20.12.8)(bufferutil@4.0.8)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@5.4.5))(utf-8-validate@5.0.10)':
     dependencies:
-      '@remix-run/dev': '@vercel/remix-run-dev@1.16.1(@types/node@20.12.8)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@5.4.5))'
+      '@remix-run/dev': '@vercel/remix-run-dev@1.16.1(@types/node@20.12.8)(bufferutil@4.0.8)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@5.4.5))(utf-8-validate@5.0.10)'
       '@vercel/build-utils': 6.7.3
       '@vercel/nft': 0.22.5
       '@vercel/static-config': 2.0.17
@@ -6355,7 +6372,7 @@ snapshots:
       - ts-node
       - utf-8-validate
 
-  '@vercel/remix-run-dev@1.16.1(@types/node@20.12.8)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@5.4.5))':
+  '@vercel/remix-run-dev@1.16.1(@types/node@20.12.8)(bufferutil@4.0.8)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@5.4.5))(utf-8-validate@5.0.10)':
     dependencies:
       '@babel/core': 7.24.5
       '@babel/generator': 7.24.5
@@ -6407,7 +6424,7 @@ snapshots:
       sort-package-json: 1.57.0
       tar-fs: 2.1.1
       tsconfig-paths: 4.2.0
-      ws: 7.5.9
+      ws: 7.5.9(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       xdm: 2.1.0
     transitivePeerDependencies:
       - '@types/node'
@@ -6433,10 +6450,10 @@ snapshots:
 
   '@vercel/ruby@1.3.76': {}
 
-  '@vercel/static-build@1.3.32':
+  '@vercel/static-build@1.3.32(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
     dependencies:
       '@vercel/gatsby-plugin-vercel-analytics': 1.0.10
-      '@vercel/gatsby-plugin-vercel-builder': 1.3.5
+      '@vercel/gatsby-plugin-vercel-builder': 1.3.5(bufferutil@4.0.8)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -6692,6 +6709,11 @@ snapshots:
       base64-js: 1.5.1
       ieee754: 1.2.1
 
+  bufferutil@4.0.8:
+    dependencies:
+      node-gyp-build: 4.8.1
+    optional: true
+
   bytes@3.1.2: {}
 
   cac@6.7.14: {}
@@ -6866,6 +6888,8 @@ snapshots:
   core-js-compat@3.37.0:
     dependencies:
       browserslist: 4.23.0
+
+  core-js@3.36.1: {}
 
   core-util-is@1.0.3: {}
 
@@ -7443,6 +7467,10 @@ snapshots:
     dependencies:
       '@types/node': 20.12.8
       require-like: 0.1.2
+
+  excalibur@0.29.3:
+    dependencies:
+      core-js: 3.36.1
 
   execa@5.1.1:
     dependencies:
@@ -10152,6 +10180,11 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
+  utf-8-validate@5.0.10:
+    dependencies:
+      node-gyp-build: 4.8.1
+    optional: true
+
   util-deprecate@1.0.2: {}
 
   utils-merge@1.0.1: {}
@@ -10167,18 +10200,18 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vercel@29.4.0(@types/node@20.12.8)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@5.4.5)):
+  vercel@29.4.0(@types/node@20.12.8)(bufferutil@4.0.8)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@5.4.5))(utf-8-validate@5.0.10):
     dependencies:
       '@vercel/build-utils': 6.7.3
       '@vercel/go': 2.5.1
       '@vercel/hydrogen': 0.0.64
       '@vercel/next': 3.8.5
-      '@vercel/node': 2.14.3
+      '@vercel/node': 2.14.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       '@vercel/python': 3.1.60
       '@vercel/redwood': 1.1.15
-      '@vercel/remix-builder': 1.8.10(@types/node@20.12.8)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@5.4.5))
+      '@vercel/remix-builder': 1.8.10(@types/node@20.12.8)(bufferutil@4.0.8)(terser@5.31.0)(ts-node@10.9.1(@types/node@20.12.8)(typescript@5.4.5))(utf-8-validate@5.0.10)
       '@vercel/ruby': 1.3.76
-      '@vercel/static-build': 1.3.32
+      '@vercel/static-build': 1.3.32(bufferutil@4.0.8)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - '@remix-run/serve'
       - '@swc/core'
@@ -10330,9 +10363,15 @@ snapshots:
 
   wrappy@1.0.2: {}
 
-  ws@7.5.9: {}
+  ws@7.5.9(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+    optionalDependencies:
+      bufferutil: 4.0.8
+      utf-8-validate: 5.0.10
 
-  ws@8.13.0: {}
+  ws@8.13.0(bufferutil@4.0.8)(utf-8-validate@5.0.10):
+    optionalDependencies:
+      bufferutil: 4.0.8
+      utf-8-validate: 5.0.10
 
   xdm@2.1.0:
     dependencies:
