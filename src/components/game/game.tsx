@@ -1,5 +1,5 @@
 import { component$, useVisibleTask$ } from "@builder.io/qwik";
-import { Engine, DisplayMode } from "excalibur";
+import { Engine, DisplayMode, Actor, Color, Vector, vec } from "excalibur";
 
 export default component$(() => {
   useVisibleTask$(() => {
@@ -10,11 +10,25 @@ export default component$(() => {
       displayMode: DisplayMode.FitContainer,
     });
 
+    const basicPlayer = new Actor({
+      name: "player",
+      width: 50,
+      height: 50,
+      color: Color.Red,
+      pos: new Vector(100, 100),
+    });
+
+    basicPlayer.actions.repeatForever((builder) => {
+      builder.moveBy(vec(100, 0), 20);
+      builder.moveBy(vec(-100, 0), 20);
+    });
+
+    game.add(basicPlayer);
     game.start();
   });
 
   return (
-    <div class="w-game h-game flex flex-col flex-nowrap items-center justify-center align-middle md:gap-14">
+    <div class="flex h-game w-game flex-col flex-nowrap items-center justify-center align-middle md:gap-14">
       <canvas id="game"></canvas>
     </div>
   );
