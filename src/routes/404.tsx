@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import ImgGoblin from "../../media/goblin.png?jsx";
+import ImgGoblin from "../media/goblin.png?jsx";
 
 export default component$(() => {
   return (
