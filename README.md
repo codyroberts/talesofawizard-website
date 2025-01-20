@@ -1,43 +1,36 @@
-## Vercel Edge
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-This starter site is configured to deploy to [Vercel Edge Functions](https://vercel.com/docs/concepts/functions/edge-functions), which means it will be rendered at an edge location near to your users.
+## Getting Started
 
-## Installation
+First, run the development server:
 
-The adaptor will add a new `vite.config.ts` within the `adapters/` directory, and a new entry file will be created, such as:
-
-```
-└── adapters/
-    └── vercel-edge/
-        └── vite.config.ts
-└── src/
-    └── entry.vercel-edge.tsx
-```
-
-Additionally, within the `package.json`, the `build.server` script will be updated with the Vercel Edge build.
-
-## Production build
-
-To build the application for production, use the `build` command, this command will automatically run `pnpm build.server` and `pnpm build.client`:
-
-```shell
-pnpm build
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-[Read the full guide here](https://github.com/QwikDev/qwik/blob/main/starters/adapters/vercel-edge/README.md)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Dev deploy
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-To deploy the application for development:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-```shell
-pnpm deploy
-```
+## Learn More
 
-Notice that you might need a [Vercel account](https://docs.Vercel.com/get-started/) in order to complete this step!
+To learn more about Next.js, take a look at the following resources:
 
-## Production deploy
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-The project is ready to be deployed to Vercel. However, you will need to create a git repository and push the code to it.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-You can [deploy your site to Vercel](https://vercel.com/docs/concepts/deployments/overview) either via a Git provider integration or through the Vercel CLI.
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
