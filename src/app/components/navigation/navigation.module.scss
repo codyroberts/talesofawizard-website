@@ -105,6 +105,20 @@
         &.show {
             opacity: 1;
             pointer-events: all;
+        }        
+        
+        @include mixins.desktop {
+            position: relative;
+            width: auto;
+            height: auto;
+            top: auto;
+            left: auto;
+            transform: none;
+            opacity: 1;
+            pointer-events: all;
+            flex-direction: row;
+            gap: 1rem;
+            background-color: transparent;
         }
     }
 }

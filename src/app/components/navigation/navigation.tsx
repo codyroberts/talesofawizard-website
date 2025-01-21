@@ -23,8 +23,15 @@ const menus = [
 
 const Navigation: React.FC = () => {
     const [open, setOpen] = useState(false);
-
     const device: String | undefined = getDeviceType();
+
+    const handleBookClick = () => {
+        if(device == "Desktop" || device === "Tablet") {
+            window.location.href = '/';
+        } else {
+            setOpen(!open);
+        }
+    }
 
     return (
         <div className={styles.container}>
@@ -41,7 +48,7 @@ const Navigation: React.FC = () => {
             )})}
             </div>
             <Link href='/'>
-                <Image src="/images/OldBook.png" width={2100} height={2100} alt="Home Button" className={styles.image} onClick={() => {setOpen(!open)}} />
+                <Image src="/images/OldBook.png" width={2100} height={2100} alt="Home Button" className={styles.image} onClick={handleBookClick} />
             </Link>
         </div>
     );
