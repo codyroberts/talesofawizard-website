@@ -5,7 +5,7 @@ import styles from './header.module.scss';
 const Header: React.FC = () => {
   return (
     <div className={styles.container}>
-        <Navigation />
+      <Navigation />
     </div>
   );
 };

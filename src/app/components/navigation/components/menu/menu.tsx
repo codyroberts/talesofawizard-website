@@ -3,9 +3,9 @@
 import React, { ReactNode, useState } from 'react';
 import styles from './menu.module.scss';
 
-type MenuProps = { 
-    header: string,
-    children: ReactNode
+type MenuProps = {
+  header: string;
+  children: ReactNode;
 };
 
 const Menu: React.FC<MenuProps> = ({ header, children }) => {
@@ -13,10 +13,18 @@ const Menu: React.FC<MenuProps> = ({ header, children }) => {
 
   return (
     <div className={`${styles.container}`}>
-      <div className={styles.header} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+      <div
+        className={styles.header}
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
+      >
         {header}
       </div>
-      <div className={`${styles.items} ${open ? styles.open : styles.closed}`}  onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+      <div
+        className={`${styles.items} ${open ? styles.open : styles.closed}`}
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
+      >
         {children}
       </div>
     </div>

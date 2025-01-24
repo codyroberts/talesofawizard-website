@@ -1,34 +1,35 @@
 @use './scss/variables.scss' as variables;
 
 @font-face {
-    font-family: 'Spectral';
-    src: url('/fonts/spectral-regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Spectral';
+  src: url('/fonts/spectral-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
-html, body {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    overflow: none;
-    background-color: variables.$darkest;
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: none;
+  background-color: variables.$darkest;
 }
 
 * {
-    box-sizing: border-box;
-    font-family: Spectral;
-    color: white;
+  box-sizing: border-box;
+  font-family: Spectral;
+  color: white;
 }
 
 .background {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    object-fit: cover;
-    top: 0;
-    opacity: 0.2;
-    z-index: 0;
-    pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
 }
