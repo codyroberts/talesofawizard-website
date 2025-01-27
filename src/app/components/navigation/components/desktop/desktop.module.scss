@@ -1,0 +1,49 @@
+@use '../../../../scss/variables.scss' as variables;
+@use '../../../../scss/mixins.scss' as mixins;
+
+.container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+  align-items: center;
+  width: 25rem;
+  top: 0;
+
+  // These children go on the left
+  > :nth-child(1),
+  > :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+  }
+
+  // These children go on the right
+  > :nth-child(3),
+  > :nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    order: 3;
+  }
+
+  // This is the book
+  > :nth-child(5) {
+    display: inline-block;
+    order: 2;
+  }
+
+  .image {
+    width: 5rem;
+    height: auto;
+    position: relative;
+    transition: filter 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 4;
+
+    &:hover {
+      filter: drop-shadow(0 0 15px rgba(variables.$light, 0.8))
+        drop-shadow(0 0 30px rgba(variables.$highlight, 0.6));
+    }
+  }
+}
