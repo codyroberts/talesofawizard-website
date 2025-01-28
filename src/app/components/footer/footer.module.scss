@@ -1,0 +1,27 @@
+@use '../../scss/variables.scss' as variables;
+@use '../../scss/mixins.scss' as mixins;
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  padding: 1rem;
+  font-size: 0.6rem;
+  top: 0;
+
+  a {
+    color: variables.$dark-purple;
+    text-decoration: none;
+    &:hover {
+      color: variables.$light-purple;
+    }
+  }
+
+  @include mixins.desktop {
+    top: unset;
+    bottom: 0;
+    font-size: 1rem;
+  }
+}

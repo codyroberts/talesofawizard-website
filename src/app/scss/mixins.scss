@@ -1,0 +1,20 @@
+@use './variables.scss' as variables;
+
+// Media Queries
+@mixin desktop {
+  @media (min-width: #{variables.$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{variables.$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: #{variables.$screen-sm-min}) {
+    @content;
+  }
+}

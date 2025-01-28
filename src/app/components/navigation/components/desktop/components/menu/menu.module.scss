@@ -1,0 +1,44 @@
+@use '../../../../../../scss/variables.scss' as variables;
+@use '../../../../../../scss/mixins.scss' as mixins;
+
+.container {
+  display: flex;
+  width: fit-content;
+  position: relative;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+
+  .header {
+    width: fit-content;
+    cursor: pointer;
+    transition: color 0.6s ease;
+    font-size: 1.5rem;
+  }
+
+  @include mixins.desktop {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 2vh;
+  gap: 0.5vh;
+  padding: 0.5vh 0.5vh 0.5vh 0;
+  transition:
+    opacity 0.3s ease,
+    pointer-events 0.3s ease;
+
+  &.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &.closed {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
