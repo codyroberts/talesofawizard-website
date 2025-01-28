@@ -6,19 +6,19 @@ import styles from './mobile.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-interface MenuItem {
+type MenuItem = {
   href: string;
   text: string;
-}
+};
 
-interface Menu {
+type Menu = {
   header: string;
   items: MenuItem[];
-}
+};
 
-interface Props {
+type Props = {
   menus: Menu[];
-}
+};
 
 const MobileNavigation: React.FC<Props> = ({ menus }) => {
   const [open, setOpen] = useState(false);
@@ -34,7 +34,7 @@ const MobileNavigation: React.FC<Props> = ({ menus }) => {
           return (
             <div key={menuIndex}>
               <Menu header={menu.header}>
-                {menu.items.map((item: Item, itemIndex: number) => (
+                {menu.items.map((item: MenuItem, itemIndex: number) => (
                   <Item key={itemIndex} href={item.href} text={item.text} />
                 ))}
               </Menu>
