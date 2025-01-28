@@ -7,10 +7,10 @@ import MobileNavigation from './components/mobile/mobile';
 const items = {
   game: [{ href: '/game', text: 'Play' }],
   learn: [
-    { href: '/learn', text: 'Story' },
-    { href: '/learn', text: 'Classes' },
-    { href: '/learn', text: 'Races' },
-    { href: '/learn', text: 'World' },
+    { href: '/', text: 'Story' },
+    { href: '/', text: 'Classes' },
+    { href: '/', text: 'Races' },
+    { href: '/', text: 'World' },
   ],
   github: [
     {
