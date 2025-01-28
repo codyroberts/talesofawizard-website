@@ -2,10 +2,15 @@
 
 .item {
   text-decoration: none;
+  color: variables.$highlight;
   font-size: 1.3rem;
   transition: color 0.3s ease;
 
   &:hover {
-    color: variables.$highlight;
+    color: white;
+  }
+
+  &:active {
+    color: white;
   }
 }
