@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.scss';
 import Header from './components/header/header';
 import Image from 'next/image';
+import Footer from './components/footer/footer';
 
 export const metadata: Metadata = {
   title: 'Tales of a Wizard',
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer />
         <Image
           src="/images/castle.png"
           width={2400}
