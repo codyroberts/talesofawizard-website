@@ -16,7 +16,6 @@ const Menu: React.FC<MenuProps> = ({ header, children }) => {
       <div
         className={styles.header}
         onClick={() => {
-          console.log('Header clicked');
           setOpen(!open);
         }}
       >

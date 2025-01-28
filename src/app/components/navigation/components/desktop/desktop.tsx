@@ -21,8 +21,6 @@ type Props = {
 };
 
 const DesktopNavigation: React.FC<Props> = ({ menus }) => {
-  console.log(menus);
-
   const handleBookClick = () => {
     window.location.href = '/';
   };
