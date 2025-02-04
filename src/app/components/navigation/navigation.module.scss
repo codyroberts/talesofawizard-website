@@ -18,7 +18,10 @@
 
     @include mixins.desktop {
       opacity: 0;
-      pointer-events: none;
+
+      * {
+        pointer-events: none;
+      }
     }
   }
 }
