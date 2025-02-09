@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ProviderWrapper from './providerWrapper';
 import './globals.scss';
 import Header from './components/header/header';
 import Image from 'next/image';
@@ -16,18 +17,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
-        <Footer />
-        <Image
-          src="/images/castle.png"
-          width={2400}
-          height={2400}
-          alt="Background Image"
-          className="background"
-        />
-      </body>
+      <ProviderWrapper>
+        <body>
+          <Header />
+          {children}
+          <Footer />
+          <Image
+            src="/images/castle.png"
+            width={2400}
+            height={2400}
+            alt="Background Image"
+            className="background"
+          />
+        </body>
+      </ProviderWrapper>
     </html>
   );
 }
