@@ -5,7 +5,7 @@ import DesktopNavigation from './components/desktop/desktop';
 import MobileNavigation from './components/mobile/mobile';
 
 const items = {
-  game: [{ href: '/game', text: 'Play' }],
+  game: [{ href: '/', text: 'Download' }],
   learn: [
     { href: '/', text: 'Story' },
     { href: '/', text: 'Classes' },
