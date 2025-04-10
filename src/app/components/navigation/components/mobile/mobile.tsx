@@ -22,9 +22,11 @@ type Props = {
 
 const MobileNavigation: React.FC<Props> = ({ menus }) => {
   const [open, setOpen] = useState(false);
+  const [clickedMenu, setClickedMenu] = useState<number | null>(null);
 
   const handleBookClick = () => {
     setOpen(!open);
+    setClickedMenu(null);
   };
 
   return (
@@ -33,7 +35,13 @@ const MobileNavigation: React.FC<Props> = ({ menus }) => {
         {menus.map((menu: Menu, menuIndex: number) => {
           return (
             <div key={menuIndex}>
-              <Menu header={menu.header}>
+              <Menu
+                header={menu.header}
+                isOpen={clickedMenu === menuIndex}
+                onClick={() => {
+                  setClickedMenu(clickedMenu === menuIndex ? null : menuIndex);
+                }}
+              >
                 {menu.items.map((item: MenuItem, itemIndex: number) => (
                   <Item key={itemIndex} href={item.href} text={item.text} />
                 ))}
